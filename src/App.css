@@ -13,7 +13,10 @@
 }
 
 .condition {
-  line-height: 50px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .status {
