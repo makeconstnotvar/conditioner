@@ -24,8 +24,8 @@ const App = inject('$condition')(observer(props => {
           <button onClick={() => { $condition.isElectric = !$condition.isElectric }}>
             Электричество <Status isOn={$condition.isElectric} />
           </button>
-          <button onClick={() => { $condition.isCentral = !$condition.isCentral }}>
-            Центральный <Status isOn={$condition.isCentral} />
+          <button onClick={() => { $condition.isHeating = !$condition.isHeating }}>
+            Отопление <Status isOn={$condition.isHeating} />
           </button>
         </div>
         <div className='condition'>
