@@ -13,6 +13,7 @@ class ConditionStore {
     return this.isSwitched && this.isWindow && this.isElectric && this.isCentral
   }
 }
+
 const Status = props => {
   return props.isOn?'on':'off'
 }
@@ -24,13 +25,15 @@ const App = inject('$condition')(observer(props => {
   const switchHandler = () =>{
     $condition.isSwitched = !$condition.isSwitched
   }
+  
   console.log($condition.isWindow)
+  
   return (
     <main>
       <button onClick={switchHandler}>
         Включатель <Status isOn={$condition.isSwitched}/>
       </button>
-      <button onClick={()=>{$condition.isWindow=!$condition.isWindow}}>
+      <button onClick={ ()=>{$condition.isWindow=!$condition.isWindow}}>
         Окно <Status isOn={$condition.isWindow}/>
       </button>
       <button onClick={()=>{$condition.isElectric=!$condition.isElectric}}>
@@ -42,4 +45,5 @@ const App = inject('$condition')(observer(props => {
     </main>
   )
 }))
+
 export {ConditionStore, App}
