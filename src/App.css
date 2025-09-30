@@ -1,25 +1,35 @@
+body {
+    margin: 0;
+}
+
+html, body, #root, .layout {
+    height: 100%;
+}
+
 .layout {
-  display: flex;
-  text-align: center;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .controls {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 .condition {
-  min-height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .status {
-  width: 20px;
-  display: inline-flex;
+    width: 20px;
+    display: inline-flex;
+}
+
+.row {
+    margin-bottom: 20px;
 }
