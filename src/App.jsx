@@ -13,7 +13,7 @@ const App = inject('$condition')(observer(props => {
   return (
     <main className='layout'>
       <div>
-        <div  className='condition'>Кондиционер включается, только когда электричество есть везде и закрыто окно</div>
+        <div  className='condition'>Кондиционер работает, только когда он включен, есть электричество, выключено отопление и закрыто окно</div>
         <div className='controls'>
           <button onClick={switchHandler}>
             Включатель <Status isOn={$condition.isSwitched} />
