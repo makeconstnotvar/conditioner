@@ -10,7 +10,7 @@ configure({
 
 const stores = {
   $condition: new ConditionStore()
-};
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider {...stores}>
