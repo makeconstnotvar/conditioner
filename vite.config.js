@@ -7,11 +7,11 @@ export default defineConfig({
     react({
       babel: {
         plugins: [
+                ['@babel/plugin-proposal-decorators', {legacy: true}],
+                ['@babel/plugin-proposal-class-properties', {loose: true}],
                 ['@babel/plugin-syntax-jsx'],
                 ['@babel/plugin-transform-react-jsx'],
-                ['@babel/plugin-transform-react-display-name'],
-                ['@babel/plugin-proposal-decorators', {legacy: true}],
-                ['@babel/plugin-proposal-class-properties', {loose: false}]
+                ['@babel/plugin-transform-react-display-name']
               ]
       }
     })
