@@ -1,4 +1,6 @@
- const PersonsPage = props => {
+import '../styles/main.scss';
+
+const PersonsPage = props => {
   return (
     <div>Персонажи</div>
   )
