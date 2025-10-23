@@ -1,0 +1,13 @@
+@import "bootstrap.scss";
+
+$fa-font-path: "font-awesome/fonts";
+@import "font-awesome/scss/font-awesome";
+@import "condition";
+
+.hide {
+  display: none !important;
+}
+.modal-backdrop.show,
+.modal.show {
+  display: block;
+}

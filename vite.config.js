@@ -1,4 +1,4 @@
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        plugins: [['@babel/plugin-proposal-decorators', {version: '2023-05'}]],
+        plugins: [['@babel/plugin-proposal-decorators', { version: '2023-05' }]],
       },
     }),
   ],
@@ -16,10 +16,15 @@ export default defineConfig({
     jsx: 'automatic',
   },
   css: {
-    devSourcemap: true
+    devSourcemap: true,
+    preprocessorOptions: {
+      scss: {
+        includePaths: ['node_modules', 'node_modules/bootstrap/scss'],
+      },
+    },
   },
   server: {
     host: '0.0.0.0',
     sourcemap: true
   }
-})
+});

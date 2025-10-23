@@ -1,9 +1,10 @@
-import '../App.css'
-import {inject, observer} from 'mobx-react';
+import React from 'react';
+import { observer} from 'mobx-react-lite';
 import {Status} from '../Status.jsx';
+import { useStores } from '../hooks/useStores.js';
 
-const ConditionPage = inject('$condition')(observer(props => {
-  const {$condition} = props;
+const ConditionPage = observer(() => {
+  const {$condition} = useStores();
 
   const switchHandler = () => {
     $condition.isSwitched = !$condition.isSwitched
@@ -39,6 +40,6 @@ const ConditionPage = inject('$condition')(observer(props => {
       </div>
     </main>
   )
-}));
+});
 
 export {ConditionPage};

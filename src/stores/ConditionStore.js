@@ -1,7 +1,7 @@
-import { observable, computed } from 'mobx';
+import {computed, observable} from 'mobx';
 
 export class ConditionStore {
-  @observable accessor  isSwitched = false;
+  @observable accessor isSwitched = false;
   @observable accessor isWindow = false;
   @observable accessor isElectric = false;
   @observable accessor isHeating = false;
